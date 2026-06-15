@@ -1,0 +1,28 @@
+using System.ComponentModel.DataAnnotations;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Lecc 16 - act2-inciso1");
+        Console.WriteLine("Carlos Pos/Clave:24");
+
+        int[] edadPersona = new int[7];
+        int cantidadPersMayores = 0;
+        for (int i = 0; i <edadPersona.Length; i++)
+        {
+            Console.Write("Ingrese la edad" +( i+1) + ": ");
+            edadPersona[i] = Convert.ToInt32(Console.ReadLine());
+            if (edadPersona[i] >= 18)
+                cantidadPersMayores++;
+        }
+        //Mostrar datos del arreglo
+        Console.Clear();
+        Console.Write("Las edades ingresadas son: ");
+        for (int i = 0; i < edadPersona.Length; i++)
+        {
+            Console.Write(edadPersona[i]+" - ");
+        }
+        Console.WriteLine("La cantidad de personas mayores de edad son: " + cantidadPersMayores);
+    }
+}
