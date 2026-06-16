@@ -1,0 +1,41 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int[] num = new int[15];
+        Console.WriteLine("Pon 15 numeros enteros: ");
+
+        for (int i = 0; i < num.Length; i++)
+        {
+            Console.Write("numero " +(i + 1) + ": ");
+            num[i] = int.Parse(Console.ReadLine());
+        }
+
+        bool Repe = false;
+
+        for (int i = 0; i < num.Length; i++)
+        {
+            for (int crup = i + 1; crup < num.Length; crup++)
+            {
+                if (num[i] == num[crup])
+                {
+                    Repe = true;
+                    break;
+                }
+            }
+            if (Repe)
+            {
+                break;
+            }
+        }
+
+        if (Repe)
+        {
+            Console.WriteLine("si hay numeros repetidos.");
+        }
+        else
+        {
+            Console.WriteLine("no hay numeros repetidos.");
+        }
+    }
+}
