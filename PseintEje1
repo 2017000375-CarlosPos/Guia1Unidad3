@@ -1,0 +1,13 @@
+Algoritmo CarlosPoseje1Pseint
+	Dimensionar edadesP[7]
+	Definir i, mayoresEdad Como Entero
+	mayoresEdad = 0
+	Para i = 1 Hasta 7 Hacer
+	Escribir "Pon la edad de las personas ",i, ":"
+	Leer edadesP[i]
+	Si edadesP[i] >= 18 Entonces
+	mayoresEdad = mayoresEdad + 1
+	Fin Si
+	Fin Para
+	Escribir "La personas mayores de edad son: ", mayoresEdad
+FinAlgoritmo
