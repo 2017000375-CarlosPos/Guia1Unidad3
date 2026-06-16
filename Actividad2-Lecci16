@@ -1,0 +1,27 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int[] num = new int[8];
+        Console.WriteLine("Pon 8 numeros enteros: ");
+        for (int i = 0; i < num.Length; i++)
+        {
+            Console.Write("numero " + (i + 1) + ":");
+            num[i] = int.Parse(Console.ReadLine());
+        }
+
+        int numMayor = num[0];
+        int posMayor = 0;
+
+        for (int i = 1; i < num.Length; i++)
+        {
+            if (num[i] > numMayor)
+            {
+                numMayor = num[i];
+                posMayor = i;
+            }
+        }
+        Console.WriteLine("El mayor es:" + numMayor);
+        Console.WriteLine("Esta en la posicion de arreglo numero: " + posMayor);
+    }
+}
